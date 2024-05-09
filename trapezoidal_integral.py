@@ -3,11 +3,12 @@ import math
 
 a = 0
 b = math.pi*0.5
+n = 100
 
-section = (b-a) / 100
+section = (b-a) / n
 value_list = []
 
-for x in list(range(a, 100)):
+for x in list(range(a, n)):
     area = section * (sin(a+(x-1)*section) + sin(x*section)) * 0.5
     value_list.append(area)
     

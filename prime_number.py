@@ -36,7 +36,7 @@ for index_, number_ in enumerate(investigation_):
         number_ += 1
         continue
 
-if investigation_[index_] >= (b ** 0.5):
+if ( investigation_[index_] >= (b ** 0.5) ) and b!=1:
     print(str(b)+script1_)
 else:
     print(str(b)+script2_)
