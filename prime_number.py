@@ -14,7 +14,7 @@ for index, number in enumerate(investigation):
         number += 1
         continue
 
-if investigation[index] >= (a ** 0.5):
+if ( investigation[index] >= (a ** 0.5) ) and a!=1:
     print(str(a)+script1)
 else:
     print(str(a)+script2)
