@@ -8,7 +8,7 @@ n = 100
 section = (b-a) / n
 value_list = []
 
-for x in list(range(1, n)):
+for x in list(range(1, n+1)):
     area = section * (sin(a + (x-1)*section) + sin(a + x*section)) * 0.5
     value_list.append(area)
     
