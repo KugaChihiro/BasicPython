@@ -1,9 +1,6 @@
-x_list = [10, 14, 91]
-y_list = [20, 91, 14]
-
-for x,y in zip(x_list, y_list):
-    
+def euclid(x,y):
     if x > y:
+
         while True:
             if x % y == 0:
                 break
@@ -11,7 +8,6 @@ for x,y in zip(x_list, y_list):
                 x, y= y, x%y
         print(y)
     elif x == y:
-        break
         print(x)
     else:
         while True:
@@ -20,3 +16,10 @@ for x,y in zip(x_list, y_list):
             else:
                 y, x= x, y%x
         print(x)
+
+
+def euclid_plus(a,b):
+    print(euclid(a,b) == 1)
+
+
+result = euclid_plus()
