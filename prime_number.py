@@ -1,42 +1,19 @@
-a = 61
-
-script1 = "は素数です"
-script2 = "は素数ではありません"
+n = int(input("整数値")) 
 
 import math
-stop = math.floor(a ** 0.5)
-investigation = list(range(2, stop+2))
+def prime_number(n):
+    if n <= 1:
+        return False
+    if n == 2:
+        return True
+    if n % 2 == 0:
+        return False
+    upper_limit = math.isqrt(n)
+    for number in range(3, upper_limit+1, 2):
+        if n % number == 0:
+            return False
+    return True
 
-for index, number in enumerate(investigation):
-    if a%number == 0:
-        break
-    else:
-        number += 1
-        continue
 
-if ( investigation[index] >= (a ** 0.5) ) and a!=1:
-    print(str(a)+script1)
-else:
-    print(str(a)+script2)
-    
-
-b = 10
-
-script1_ = "は素数です"
-script2_ = "は素数ではありません"
-
-import math
-stop_ = math.floor(b ** 0.5)
-investigation_ = list(range(2, stop_+2))
-
-for index_, number_ in enumerate(investigation_):
-    if b%number_ == 0:
-        break
-    else:
-        number_ += 1
-        continue
-
-if ( investigation_[index_] >= (b ** 0.5) ) and b!=1:
-    print(str(b)+script1_)
-else:
-    print(str(b)+script2_)
+result = prime_number(n)
+print(result)

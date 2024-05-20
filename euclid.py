@@ -1,22 +1,29 @@
-x_list = [10, 14, 91]
-y_list = [20, 91, 14]
+a = int(input("aの値"))
+b = int(input("bの値"))
 
-for x,y in zip(x_list, y_list):
-    
-    if x > y:
+def euclid(a,b):
+    if a > b:
+
         while True:
-            if x % y == 0:
+            if a % b == 0:
                 break
             else:
-                x, y= y, x%y
-        print(y)
-    elif x == y:
-        break
-        print(x)
+                a, b= b, a%b
+        return b
+    elif a == b:
+        return a
     else:
         while True:
-            if y % x == 0:
+            if b % a == 0:
                 break
             else:
-                y, x= x, y%x
-        print(x)
+                b, a= a, b%a
+        return a
+
+
+def euclid_plus(a,b):
+    return euclid(a,b)==1
+
+result1 = euclid(a,b)
+result2 = euclid_plus(a,b)
+print(result1,result2)
